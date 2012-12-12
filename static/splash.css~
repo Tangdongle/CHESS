@@ -1,0 +1,308 @@
+/*************************************************
+ * Reset
+*************************************************/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td {
+    border:0pt none;
+    font-family:inherit;
+    font-size:100%;
+    font-style:inherit;
+    font-weight:inherit;
+    margin:0pt;
+    padding:0pt;
+    vertical-align:baseline;
+}
+
+html {
+    background-color:#FFFFFF;
+}
+
+body{
+    margin:0;
+    padding: 0px;
+    text-align:center;
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+}
+
+/*************************************************
+ * Header
+*************************************************/
+
+#splash_header{
+    position:relative;
+    display:block;
+    width:auto;
+    height:120px;
+    background-color:#E8E8E8;
+}
+
+#splash_logo
+{
+    display:inline-block;
+    background-image:url("static/logo_230.png");
+    width:230px;
+    height:62px;
+    position:relative;
+    margin-right:0;
+    margin-top:25px;
+
+}
+
+#splash_form{
+    position:relative;
+    float:right;
+    display:inline-block;
+    background-color:#0C4362;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    width:220px;
+    height:38px;
+    margin: 40px 490px 0 0;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4);
+    -moz-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4);
+}
+
+#splash_form button{
+    width:49%;
+    float:left;
+    display:inline-block;
+    background-color:#165D86;
+    margin:1px;
+    height:36px;
+    color:#FFFFFF;
+    font-size:16px;
+    font-weight: 600;
+    text-shadow:0 -1px 0 #0C4361;
+    line-height:5px;
+    padding:0;
+    border:0;
+    box-shadow: 1px 1px 0 0 #449AB8 inset;
+    -moz-box-shadow: 1px 1px 0 0 #449AB8 inset;
+    -webkit-box-shadow: 1px 1px 0 0 #449AB8 inset;
+}
+
+#splash_form button#logon{
+    -moz-border-top-right-radius: 5px;
+    -moz-border-bottom-right-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#splash_form button#signup{
+    -moz-border-top-left-radius: 5px;
+    -moz-border-bottom-left-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/*************************************************
+ * Main 
+*************************************************/
+
+#splash_main{
+    position:relative;
+    display:block;
+    width:100%;
+    margin: 0 0 10px 0;
+    background-color:#165D86;
+    height:550px;
+    -moz-box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.4) ;
+    -webkit-box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.4) ;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.4) ;
+}
+
+
+/*************************************************
+ * Nav
+*************************************************/
+
+#splash_nav
+{
+    height:50px;
+
+    width:100%;
+    position:relative;
+    display:block;
+    background-color: #FFFFFF;
+}
+
+#splash_nav ul
+{
+    width:650px;
+    margin:0 auto;
+    float:clear;
+    position:relative;
+    display:block;
+    height:100%;
+}
+
+#splash_nav ul li
+{
+    display:inline-block;
+    position:relative;
+    width:150px;
+    height:100%;
+    line-height:45px;
+    font-size:25px;
+    font-weight:400;
+    float:left;
+}
+
+
+#splash_nav ul li:before
+{
+    content:"|";
+    float:left;
+}
+
+#splash_nav ul li:first-child:before
+{
+    content:"";
+}
+
+.logon_box
+{
+    width:300px;
+
+    background-color: #DD8842;
+    background: linear-gradient(#DD8842,#2A1123);
+    background: -moz-linear-gradient(#DD8842,#2A1123);
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#DD8848), to(#2A1123));
+
+    height: 400px;
+    display:inline-block;
+    margin: 50px auto 0 auto;
+    position:relative;
+    padding-top:5px;
+    color:#151415;
+}
+
+
+.logon_box h2
+{
+    font-size:30px;
+    margin: 0 auto;
+    width:200px;
+    clear:both;
+    font-weight: 600;
+}
+
+#logon_left{
+    margin-left: 75px;
+}
+
+#logon_center{
+    margin: 50px 15px;
+}
+
+#logon_right{
+    margin-right:75px;
+}
+
+.logon_box .logon_link{
+    width:100%;
+    height:100%;
+    display:block;
+    position:relative;
+    margin: auto auto;
+}
+
+
+/*************************************************
+ * Popup 
+*************************************************/
+
+
+#backgroundPopup{
+    display:none;
+    position:fixed;
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    background:#000000;
+    border:1px solid #919191;
+    z-index:1;
+}
+
+#popupContent{
+    display:none;
+    position:fixed;
+    height:400px;
+    width:350px;
+    background:#5FFaF1;
+    border:2px solid #919191;
+    z-index:2;
+    padding:12px;
+}
+
+#popupContentClose{
+    font-size:18px;
+    line-height:14px;
+    right:6px;
+    top:4px;
+    position:absolute;
+    color:#c12040;
+    font-weight:700px;
+    display:block;
+    cursor:pointer;
+}
+
+#popupContentClose a:hover{
+    background-color:#FF1515;
+}
+
+/*************************************************
+ * Footer
+*************************************************/
+
+#splash_footer
+{
+    width:960px;
+    height:100%;
+    margin:0 auto;
+    background-color:#FFFFFF;
+    display:block;
+    position:relative;
+}
+
+#splash_footer h2
+{
+    font-size:34px;
+    font-weight:400;
+    margin: 10px 0;
+    float:left !important;
+    display:block;
+}
+
+#splash_footer p
+{
+    float:left !important;
+    font-size:16px;
+    font-weight:350;
+
+}
+
+#footer_left
+{
+    width:50%;
+    float:left;
+    display:inline-block;
+    position:relative;
+}
+
+#footer_right
+{
+    width:50%;
+    float:right;
+    display:inline-block;
+    position:relative;
+}

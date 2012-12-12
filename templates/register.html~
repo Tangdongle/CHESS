@@ -1,0 +1,12 @@
+$def with (form, list)
+
+<form method="POST" action="">
+    $:form.render()
+</form>
+
+<ul>
+    $for l in list:
+        <li>Username="$l['username']"        id="$l['userid']"</li>
+</ul>
+
+$var title: register

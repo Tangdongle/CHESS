@@ -1,0 +1,65 @@
+/************************************************
+ *   Nav
+ ************************************************* */
+#splash_nav {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  display: block;
+  background-color: white; }
+  #splash_nav ul {
+    width: 650px;
+    margin: 0 auto;
+    float: clear;
+    position: relative;
+    display: block;
+    height: 100%; }
+    #splash_nav ul li {
+      display: inline-block;
+      position: relative;
+      width: 150px;
+      height: 100%;
+      line-height: 45px;
+      font-size: 25px;
+      font-weight: 400;
+      float: left; }
+      #splash_nav ul li:before {
+        content: "|";
+        float: left; }
+      #splash_nav ul li:first-child:before {
+        content: ""; }
+
+.logon_box {
+  width: 300px;
+  background-color: #dd8842;
+  background: linear-gradient(#dd8842, #2a1123);
+  background: -moz-linear-gradient(#dd8842, #2a1123);
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#dd8848), to(#2a1123));
+  height: 400px;
+  display: inline-block;
+  margin: 50px auto 0 auto;
+  position: relative;
+  padding-top: 5px;
+  color: #151415; }
+  .logon_box h2 {
+    font-size: 30px;
+    margin: 0 auto;
+    width: 200px;
+    clear: both;
+    font-weight: 600; }
+
+#logon_left {
+  margin-left: 75px; }
+
+#logon_center {
+  margin: 50px 15px; }
+
+#logon_right {
+  margin-right: 75px; }
+
+.logon_box .logon_link {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  margin: auto auto; }

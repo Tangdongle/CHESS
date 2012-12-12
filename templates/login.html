@@ -1,0 +1,21 @@
+$def with (form)
+
+$ links = [('Forgotten your password?','recover','Recover It Here'), ('Need an Account?','register','Register Here'),]
+
+<div class="login_summary">
+    <p>
+        Log on to the Tomato System
+    </p>
+    <form action="" method="POST">
+        $:form.render()
+    </form>
+    $ i = 0
+    $for l in links:
+        $ i += 1
+        $ p = '%spx' % (i * 20)
+        <p class="login_links" style="bottom: $p !important;">
+            $:l[0] <a href="/$l[1]">$l[2]</a>
+        </p>
+</div>
+
+$var title: PSI SMS

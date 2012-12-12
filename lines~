@@ -1,0 +1,6 @@
+#!/bin/ksh
+
+for file in "${directory}"/*
+do
+    [ -f "${file}" ] && echo "file->[${file} lines->[$(wc -l < ${file})]"
+done

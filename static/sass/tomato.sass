@@ -1,0 +1,104 @@
+@import "mixins"
+@import "nav"
+@import "popup"
+@import "footer"
+
+/*************************************************
+ *   Reset
+ *************************************************
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td
+  border: 0pt none
+  font-family: inherit
+  font-size: 100%
+  font-style: inherit
+  font-weight: inherit
+  margin: 0pt
+  padding: 0pt
+  vertical-align: baseline
+
+html
+  background-color: #FFFFFF
+
+body
+  margin: 0
+  padding: 0px
+  text-align: center
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif
+
+/*************************************************
+ *   Index 
+ *************************************************
+
+
+/*************************************************
+ *  Login 
+ *************************************************
+
+#content_body
+  position: relative
+  margin: 20px auto
+  width: 800px
+  background-color: $red-l-n
+  min-height: 600px
+  height: auto
+  @include round_edgify(65px)
+  .login_summary
+    background-color: $green-l-n
+    width: 400px
+    min-height: 300px
+    height: auto
+    position: absolute
+    left: 50%
+    margin-left: -200px
+    margin-top: 10%
+    text-indent: 20px
+    text-align: left
+    border: 1px solid $black
+    @include round_edgify(25px)
+    @include box_shadowify(inset, 0, 0, 30px, 2px, rgba(0,0,0,0.4))
+    p
+      text-align: left
+      padding: 25px
+      &.login_links
+        z-index: 9999
+        font-size: 80%
+        position: absolute
+        bottom: 0
+        padding: 0 0 0 20px 
+        margin: 0
+    form
+      border: 1px solid $black
+      width: 300px 
+      height: auto
+      margin: 0 auto
+      @include round_edgify(15px)
+      ._form
+        position: relative
+        width: 300px
+        min-height: 100px
+        div
+          margin: 5px 0
+          height: inherit
+          height: 50px
+          width: auto
+          label
+            display: none
+          input
+            margin: 6px auto
+            height: 30px
+            width: 80%
+            font-size: 16px
+            @include round_edgify(7px)
+          button
+            width: 60px
+            height: 35px
+            font-weight: 600
+            font-size: 14px
+            font-family: menlo
+            background-color: $blue-l-l
+            border: 2px outset $blue-d-n
+            margin-left: 30%
+            @include round_edgify(3px)
+
+            

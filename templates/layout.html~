@@ -1,0 +1,38 @@
+$def with (content)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">  
+    <head>
+        <title>$(content.title if ('title' in content and content.title) else "Random")</title>
+        $if 'style' in content and content.style:
+            <link rel="stylesheet" type="text/css" href="$('/static/compiled/' + content.style)" />
+        $else:
+            <link rel="stylesheet" type="text/css" href="/static/compiled/ohms.css" />
+
+        <script type="text/javascript" src="/static/jquery.js" />
+        <script type="text/javascript">
+            jQuery(document).ready(function(){
+                    jQuery("#popup").click(function(event){
+                        event.preventDefault();
+                        centerPopup();
+                        loadPopup();
+                    });
+                    jQuery("#popupContentClose").click(function(){
+                        disablePopup();
+                    });
+                    jQuery("#backgroundPopup").click(function(){
+                        disablePopup();
+                    });
+                    jQuery(document).keypress(function(e){
+                        if(e.keyCode==27 && popupstatus==1){
+                            disablePopup();
+                        };
+                    });
+                });
+        </script>
+    </head>
+    <body>
+        <div id="content_body">
+            $:content
+        </div>
+    </body>
+</html>

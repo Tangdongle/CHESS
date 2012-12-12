@@ -1,0 +1,139 @@
+<!ENTITY AUTHOR "Ryan Tanger">
+<!ENTITY EMAIL "tanger68@gmail.com">
+
+<!ELEMENT CHARACTERLIST (CHARACTER+)>
+
+<!ELEMENT CHARACTER (NAME,IS_NPC,LEVEL,RACE,CLASS+,STATS,NOTES?)>
+<!ATTLIST CHARACTER
+    PLAYER_NAME CDATA "&AUTHOR;"
+    PLAYER_EMAIL CDATA "&EMAIL;">
+
+<!ELEMENT NAME (FIRST_NAME,LAST_NAME?)>
+
+<!ELEMENT FIRST_NAME (#PCDATA)>
+<!ELEMENT LAST_NAME (#PCDATA)>
+
+<!-- Determine if PC or NPC -->
+<!ELEMENT IS_NPC (YES|NO)+>
+
+<!ELEMENT YES EMPTY>
+<!ELEMENT NO EMPTY>
+
+<!-- Current character level, total xp gained so far and xp required to level up -->
+<!ELEMENT LEVEL (CUR_LVL+,TOTAL_XP+,TO_NEXT_LEVEL+)>
+
+<!ELEMENT CUR_LVL (#PCDATA)>
+<!ELEMENT TOTAL_XP (#PCDATA)>
+<!ELEMENT TO_NEXT_LEVEL (#PCDATA)>
+
+<!-- Race of character and background story -->
+<!ELEMENT RACE (#PCDATA)>
+<!ATTLIST RACE
+    BACKGROUND CDATA #IMPLIED>
+
+<!-- A class has a class type (wizard, fighter etc) and one or more powers -->
+<!ELEMENT CLASS (TYPE+,POWER+)>
+
+<!-- Type of class and subtype of class -->
+<!ELEMENT TYPE (#PCDATA)>
+<!ATTLIST TYPE 
+    SUBTYPE CDATA #IMPLIED> 
+
+<!-- Character Power list -->
+<!ELEMENT POWER (POWER_NAME,POWER_LVL,KEYWORD+,ACTION_TYPE,PREREQ?,TARGET,ATTACK,HIT+,MISS?,DESC?)>
+
+<!ELEMENT POWER_NAME (#PCDATA)>
+<!ELEMENT POWER_LVL (#PCDATA)>
+
+<!-- Power keywords (Acid, radiant, necrotic etc) -->
+<!ELEMENT KEYWORD (#PCDATA)>
+
+<!-- Melee/Ranged and range (IE Ranged-20) -->
+<!ELEMENT ACTION_TYPE (#PCDATA)>
+
+<!-- Prerequisite (bloodied, trigger etc) -->
+<!ELEMENT PREREQ (#PCDATA)>
+
+<!-- Single target or multiple targets? (ie close-burst-5 etc) -->
+<!ELEMENT TARGET (#PCDATA)>
+
+<!-- Attack value. Read as ATK VS DEF (ie STR VS AC) -->
+<!ELEMENT ATTACK (ATK,DEF)>
+
+<!ELEMENT ATK (#PCDATA)>
+<!ELEMENT DEF (#PCDATA)>
+
+<!-- Hit damage. Read as WPN_MOD(dice roll) + ABIL_MOD. Applies HIT_STATUS -->
+<!ELEMENT HIT (WPN_MOD?,ABIL_MOD?,HIT_STATUS?)>
+
+<!ELEMENT WPN_MOD (#PCDATA)>
+<!ELEMENT ABIL_MOD (#PCDATA)>
+<!ELEMENT HIT_STATUS (#PCDATA)>
+
+<!-- Power miss details -->
+<!ELEMENT MISS (WPN_MOD?,ABIL_MOD?,MISS_STATUS?)>
+
+<!ELEMENT MISS_STATUS (#PCDATA)>
+
+<!-- Description of power -->
+<!ELEMENT DESC (#PCDATA)>
+
+<!-- Stats -->
+<!ELEMENT STATS (ALIGNMENT,INITIATIVE,SPEED,DEFENSES,ABILITIES,SKILLS,HP,AP?,PASSIVES)>
+
+<!ELEMENT ALIGNMENT (#PCDATA)>
+<!ELEMENT INITIATIVE (#PCDATA)>
+<!ELEMENT SPEED (#PCDATA)>
+
+<!-- Defenses -->
+<!ELEMENT DEFENSES (AC,FORT,REF,WILL)>
+
+<!ELEMENT AC (#PCDATA)> 
+<!ELEMENT FORT (#PCDATA)>
+<!ELEMENT REF (#PCDATA)>
+<!ELEMENT FORT (#PCDATA)>
+
+<!-- Ability List -->
+<!ELEMENT ABILITIES (STR,CON,DEX,INT,WIS,CHA)>
+
+<!ELEMENT STR (ABIL_BASE,ABIL_MOD)>
+<!ELEMENT CON (ABIL_BASE,ABIL_MOD)>
+<!ELEMENT DEX (ABIL_BASE,ABIL_MOD)>
+<!ELEMENT INT (ABIL_BASE,ABIL_MOD)>
+<!ELEMENT WIS (ABIL_BASE,ABIL_MOD)>
+<!ELEMENT CHA (ABIL_BASE,ABIL_MOD)>
+
+<!ELEMENT ABIL_BASE (#PCDATA)>
+<!ELEMENT ABIL_MOD (#PCDATA)>
+
+<!-- Skill list -->
+<!ELEMENT SKILLS (SKILL+)>
+
+<!ELEMENT SKILL (SKILL_NAME,TRAINED,SKILL_BONUS)>
+
+<!ELEMENT SKILL_NAME (#PCDATA)>
+<!ELEMENT TRAINED (YES|NO)>
+<!ELEMENT SKILL_BONUS (#PCDATA)>
+
+<!-- Health Points -->
+<!ELEMENT HP (MAX_HP,TEMP_HP,CUR_HP)>
+
+<!ELEMENT MAX_HP (#PCDATA)>
+<!ELEMENT TEMP_HP (#PCDATA)>
+<!ELEMENT CUR_HP (#PCDATA)>
+
+<!-- Action Point. Element is removed on use, added on gain -->
+<!ELEMENT AP (POINT?,AP_USED)>
+
+<!ELEMENT POINT EMPTY>
+<!ELEMENT AP_USED (YES|NO)>
+
+<!-- Passive status effects and buffs -->
+<!ELEMENT PASSIVES (PASSIVE?)>
+
+<!ELEMENT PASSIVE (#PCDATA)>
+
+<!-- Notes on Character (Quests etc) -->
+<!ELEMENT NOTES (NOTE?)>
+
+<!ELEMENT NOTE (#PCDATA)>

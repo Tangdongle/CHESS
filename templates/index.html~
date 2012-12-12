@@ -1,0 +1,49 @@
+$def with (pop)
+
+<div id="splash_header">
+    <a href="/" id="splash_logo"></a>
+    <div id="splash_access">
+        <a href="/login/" id="logon">Logon</a>
+        <a href="/register/" id="signup">Register</a>
+    </div>
+</div>
+
+<div id="splash_nav">
+    <ul>
+        <li><a>Products</a></li>
+        <li><a>About</a></li>
+        <li><a>Downloads</a></li>
+        <li><a>Contacts</a></li>
+    </ul>
+</div>
+
+<div id="splash_main">
+    <div class="logon_box" id="logon_left">
+        <h2>OH&S</h2>
+        <a href="admin/" class="logon_link"></a>
+    </div>
+
+    <div class="logon_box" id="logon_center">
+        <h2>QUALITY</h2>
+        <a href="users/" class="logon_link"></a>
+    </div>
+
+    <div class="logon_box" id="logon_right">
+        <h2>ENVIRONMENT</h2>
+    </div>
+</div>
+
+<div id="splash_footer">
+    <div id="footer_left">
+        <h2>Everything you need</h2>
+        <p> To internally manage your workers, incident reports and audits</p>
+    </div>
+    <div id="footer_right">
+        <h2>I likea do, cha cha cha!</h2>
+    </div>
+</div>
+
+
+
+$var title: Peer Saferety!
+$var style: ohms.css
