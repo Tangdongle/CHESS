@@ -1,0 +1,26 @@
+$def with (reports, form, delete, msg=None, uname=None, timeconv=None)
+
+    $if uname:
+        <p>Welcome $uname</p>
+        <br/>
+    $if msg:
+        <div class="report_message">
+            <p>$msg</p>
+        </div>
+
+<form method="POST" action="">
+    $:form.render()
+</form>
+
+$for i in reports:
+    <div class="reports">
+        <p>$i.username | $(timeconv(i.timestamp))</p>
+        <br/>
+        <p><em>$i.report_text</em></p>
+        <p>Located in: $i.country, $i.state, $i.site</p>
+        <form action="/delete/$i.id" method="POST">
+            $:delete.render()
+        </form>
+    </div>
+
+$var title: Reports

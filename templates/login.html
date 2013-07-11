@@ -1,21 +1,33 @@
-$def with (form)
+$def with (form, warning=None,users=None)
 
-$ links = [('Forgotten your password?','recover','Recover It Here'), ('Need an Account?','register','Register Here'),]
+$ links = [('Forgotten your password?','recover','Recover It Here'),]
+
+<img class="bg_image" src="static/img/chess_background.png" />
 
 <div class="login_summary">
-    <p>
-        Log on to the Tomato System
-    </p>
-    <form action="" method="POST">
-        $:form.render()
-    </form>
-    $ i = 0
-    $for l in links:
-        $ i += 1
-        $ p = '%spx' % (i * 20)
-        <p class="login_links" style="bottom: $p !important;">
-            $:l[0] <a href="/$l[1]">$l[2]</a>
-        </p>
+    <div class="login_top">
+        <img class='chess_logo' src="static/img/chess_logo.png" alt="CHESS System Logo" />
+        <h1 class="chess_title"> CHESS</h1>
+        <h2 class="chess_text">complete health environment & safety system</h2>
+    </div>
+    <div class="login_body">
+        $if warning is not None:
+            <p>
+                $:warning
+            </p>
+        <form class="input_form" action="" method="POST">
+            <input type="hidden" name="csrf_token" value="$csrf_token()" />
+            $:form.render()
+        </form>
+        $ i = 0
+        $for l in links:
+            $ i += 1
+            $ p = '%spx' % (i * 20)
+            <p class="login_links" style="bottom: $p !important;">
+                $:l[0] <a href="/$l[1]">$l[2]</a>
+            </p>
+    </div>
 </div>
 
 $var title: PSI SMS
+$var header = False

@@ -1,0 +1,29 @@
+$def with (form, resources, warning=None)
+
+<div class="repository_body">
+    <h1>The CHESS Repository</h1>
+    <form class="repo_form" enctype="multipart/form-data" action="" method="POST">
+        <input type="hidden" name="csrf_token" value="$csrf_token()" />
+        $:form.render()
+    </form>
+    $if warning:
+        <p class="warning">$warning</p>
+
+    <div class="latest_repo">
+        $for r in resources:
+            $if r[1]:
+                <h2>$r[0].capitalize()</h2>
+                <a href='repository/$context.cin/$r[0]/T'>Download</a>
+    </div>
+    <div class="old_repo">
+        $for r in resources:
+            $if not r[1]:
+                $ n = (r[0][:r[0].find('.')].strip('0123456789') + r[0][r[0].find('.'):])
+                <h2>$n.capitalize()</h2>
+                <a href='/repository/$context.cin/$r[0]/F'>Download $n - $r[2]</a>
+    </div>
+</div>
+
+$var title: Resource Repository
+$var header: True
+

@@ -1,0 +1,23 @@
+$def with (resources, cat, letter, cin)
+
+<div class="category_listing">
+    $if not resources:
+        <div class="filename">
+            <p>There are no documents in this category beginning with this
+            letter.</p>
+        </div>
+    $ root = 0
+    $ user = 0
+    $for r in resources:
+    <div style="top: $(30 * (user if r.FK_clientID > 0 else root))px;" class="filename $('user' if r.FK_clientID > 0 else 'root')  $loop.parity">
+            <a href="/download/$cat/$letter/$r.FK_clientID/$r.resourcefname">$r.resourcefname</a>
+            $if r.FK_clientID > 0:
+                $ user += 1
+            $else:
+                $ root += 1
+
+        </div>
+</div>
+
+$var title: $cat - $letter
+$var header: True

@@ -1,0 +1,271 @@
+/************************************************
+ *   Header
+ ************************************************* */
+#splash_header {
+  position: relative;
+  display: block;
+  width: auto;
+  height: 120px;
+  background-color: #e8e8e8; }
+
+#splash_logo {
+  display: inline-block;
+  background-image: url("static/logo_230.png");
+  width: 230px;
+  height: 62px;
+  position: absolute;
+  top: 50%;
+  margin-top: -31px;
+  left: 25%; }
+
+#splash_access {
+  position: absolute;
+  top: 50%;
+  margin-top: -19px;
+  right: 25%;
+  float: right;
+  display: inline-block;
+  background-color: #0c4362;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  width: 220px;
+  height: 38px;
+  line-height: 19px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4); }
+  #splash_access a {
+    width: 49%;
+    float: left;
+    display: inline-block;
+    background-color: #165d86;
+    margin: 1px;
+    height: 36px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow: 0 -1px 0 #0c4361;
+    padding: 0;
+    border: 0;
+    line-height: 36px;
+    box-shadow: 1px 1px 0 0 #449ab8 inset;
+    -moz-box-shadow: 1px 1px 0 0 #449ab8 inset;
+    -webkit-box-shadow: 1px 1px 0 0 #449ab8 inset;
+    cursor: pointer; }
+    #splash_access a#logon {
+      -moz-border-top-right-radius: 5px;
+      -moz-border-bottom-right-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -webkit-border-bottom-right-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px; }
+    #splash_access a#signup {
+      -moz-border-top-left-radius: 5px;
+      -moz-border-bottom-left-radius: 5px;
+      -webkit-border-top-left-radius: 5px;
+      -webkit-border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px; }
+
+/************************************************
+ *   Nav
+ ************************************************* */
+#splash_nav {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  display: block;
+  background-color: white; }
+  #splash_nav ul {
+    width: 650px;
+    margin: 0 auto;
+    float: clear;
+    position: relative;
+    display: block;
+    height: 100%; }
+    #splash_nav ul li {
+      display: inline-block;
+      position: relative;
+      width: 150px;
+      height: 100%;
+      line-height: 45px;
+      font-size: 25px;
+      font-weight: 400;
+      float: left; }
+      #splash_nav ul li:before {
+        content: "|";
+        float: left; }
+      #splash_nav ul li:first-child:before {
+        content: ""; }
+
+.logon_box {
+  width: 300px;
+  background-color: #dd8842;
+  background: linear-gradient(#dd8842, #2a1123);
+  background: -moz-linear-gradient(#dd8842, #2a1123);
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#dd8848), to(#2a1123));
+  height: 400px;
+  display: inline-block;
+  margin: 50px auto 0 auto;
+  position: relative;
+  padding-top: 5px;
+  color: #151415; }
+  .logon_box h2 {
+    font-size: 30px;
+    margin: 0 auto;
+    width: 200px;
+    clear: both;
+    font-weight: 600; }
+
+#logon_left {
+  margin-left: 75px; }
+
+#logon_center {
+  margin: 50px 15px; }
+
+#logon_right {
+  margin-right: 75px; }
+
+.logon_box .logon_link {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  margin: auto auto; }
+
+/************************************************
+ *   Popup 
+ ************************************************* */
+#backgroundPopup {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: black;
+  border: 1px solid #919191;
+  z-index: 1; }
+
+#popupContent {
+  display: none;
+  position: fixed;
+  height: 400px;
+  width: 350px;
+  background: #5ffaf1;
+  border: 2px solid #919191;
+  z-index: 2;
+  padding: 12px; }
+
+#popupContentClose {
+  font-size: 18px;
+  line-height: 14px;
+  right: 6px;
+  top: 4px;
+  position: absolute;
+  color: #c12040;
+  font-weight: 700px;
+  display: block;
+  cursor: pointer; }
+  #popupContentClose a:hover {
+    background-color: #ff1515; }
+
+/************************************************
+ *   Footer
+ ************************************************* */
+#splash_footer {
+  width: 960px;
+  height: 100%;
+  margin: 0 auto;
+  background-color: white;
+  display: block;
+  position: relative; }
+  #splash_footer h2 {
+    font-size: 34px;
+    font-weight: 400;
+    margin: 10px 0;
+    float: left !important;
+    display: block; }
+  #splash_footer p {
+    float: left !important;
+    font-size: 16px;
+    font-weight: 350; }
+
+#footer_left {
+  width: 50%;
+  float: left;
+  display: inline-block;
+  position: relative; }
+
+#footer_right {
+  width: 50%;
+  float: right;
+  display: inline-block;
+  position: relative; }
+
+/************************************************
+ *   Register
+ ************************************************* */
+.wrong {
+  background-color: red;
+  width: 100%;
+  position: relative;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-indent: 10px;
+  margin: 0; }
+
+form {
+  width: auto; }
+  form ._form {
+    width: 1024px;
+    display: block;
+    height: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0; }
+    form ._form ._hidden {
+      display: hidden; }
+    form ._form ._input {
+      padding: 0;
+      margin: 0;
+      height: 80%;
+      width: 200px;
+      position: relative;
+      float: left;
+      display: inline-block;
+      background: linear-gradient(#165d86, #2a1123);
+      background: -moz-linear-gradient(#165d86, #2a1123);
+      background: -webkit-gradient(linear, 0 0, 0 bottom, from(#165d86), to(#2a1123));
+      border-left: 1px solid black; }
+      form ._form ._input ._input_title {
+        font-weight: 800;
+        color: #addccd;
+        position: absolute;
+        top: 5%;
+        margin: 0 auto;
+        width: 80%;
+        display: block;
+        line-height: 40px; }
+        form ._form ._input ._input_title em {
+          text-align: left;
+          text-indent: 5px;
+          font-size: 250%;
+          display: block; }
+      form ._form ._input input, form ._form ._input button {
+        position: absolute;
+        display: block;
+        top: 30%;
+        margin-left: 10%;
+        text-indent: 0;
+        border: none;
+        height: 20px; }
+      form ._form ._input input {
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        box-shadow: inset 0 0 5px #001122;
+        -moz-box-shadow: inset 0 0 5px #001122;
+        -webkit-box-shadow: inset 0 0 5px #001122; }

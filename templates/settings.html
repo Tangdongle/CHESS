@@ -1,0 +1,16 @@
+$def with (form, warning=None)
+
+<div class="settings_content">
+    <h2 class='settings_msg'>
+        $warning
+    </h2>
+
+    <h2>CHESS Settings</h2>
+    <form action="" method="POST">
+        $:form.render()
+    </form>
+
+</div>
+
+$var title: User Settings
+$var header: True

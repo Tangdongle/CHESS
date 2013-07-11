@@ -1,0 +1,311 @@
+/************************************************
+ *   Header
+ ************************************************* */
+#splash_header {
+  position: relative;
+  display: block;
+  width: auto;
+  height: 120px;
+  background-color: #e8e8e8; }
+
+#splash_logo {
+  display: inline-block;
+  background-image: url("static/logo_230.png");
+  width: 230px;
+  height: 62px;
+  position: absolute;
+  top: 50%;
+  margin-top: -31px;
+  left: 25%; }
+
+#splash_access {
+  position: absolute;
+  top: 50%;
+  margin-top: -19px;
+  right: 25%;
+  float: right;
+  display: inline-block;
+  background-color: #0c4362;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  width: 220px;
+  height: 38px;
+  line-height: 19px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4); }
+  #splash_access a {
+    width: 49%;
+    float: left;
+    display: inline-block;
+    background-color: #165d86;
+    margin: 1px;
+    height: 36px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow: 0 -1px 0 #0c4361;
+    padding: 0;
+    border: 0;
+    line-height: 36px;
+    box-shadow: 1px 1px 0 0 #449ab8 inset;
+    -moz-box-shadow: 1px 1px 0 0 #449ab8 inset;
+    -webkit-box-shadow: 1px 1px 0 0 #449ab8 inset;
+    cursor: pointer; }
+    #splash_access a#logon {
+      -moz-border-top-right-radius: 5px;
+      -moz-border-bottom-right-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -webkit-border-bottom-right-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px; }
+    #splash_access a#signup {
+      -moz-border-top-left-radius: 5px;
+      -moz-border-bottom-left-radius: 5px;
+      -webkit-border-top-left-radius: 5px;
+      -webkit-border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px; }
+
+/************************************************
+ *   Nav
+ ************************************************* */
+#splash_nav {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  display: block;
+  background-color: white; }
+  #splash_nav ul {
+    width: 650px;
+    margin: 0 auto;
+    float: clear;
+    position: relative;
+    display: block;
+    height: 100%; }
+    #splash_nav ul li {
+      display: inline-block;
+      position: relative;
+      width: 150px;
+      height: 100%;
+      line-height: 45px;
+      font-size: 25px;
+      font-weight: 400;
+      float: left; }
+      #splash_nav ul li:before {
+        content: "|";
+        float: left; }
+      #splash_nav ul li:first-child:before {
+        content: ""; }
+
+.logon_box {
+  width: 300px;
+  background-color: #dd8842;
+  background: linear-gradient(#dd8842, #2a1123);
+  background: -moz-linear-gradient(#dd8842, #2a1123);
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#dd8848), to(#2a1123));
+  height: 400px;
+  display: inline-block;
+  margin: 50px auto 0 auto;
+  position: relative;
+  padding-top: 5px;
+  color: #151415; }
+  .logon_box h2 {
+    font-size: 30px;
+    margin: 0 auto;
+    width: 200px;
+    clear: both;
+    font-weight: 600; }
+
+#logon_left {
+  margin-left: 75px; }
+
+#logon_center {
+  margin: 50px 15px; }
+
+#logon_right {
+  margin-right: 75px; }
+
+.logon_box .logon_link {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  margin: auto auto; }
+
+/************************************************
+ *   Popup 
+ ************************************************* */
+#backgroundPopup {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: black;
+  border: 1px solid #919191;
+  z-index: 1; }
+
+#popupContent {
+  display: none;
+  position: fixed;
+  height: 400px;
+  width: 350px;
+  background: #5ffaf1;
+  border: 2px solid #919191;
+  z-index: 2;
+  padding: 12px; }
+
+#popupContentClose {
+  font-size: 18px;
+  line-height: 14px;
+  right: 6px;
+  top: 4px;
+  position: absolute;
+  color: #c12040;
+  font-weight: 700px;
+  display: block;
+  cursor: pointer; }
+  #popupContentClose a:hover {
+    background-color: #ff1515; }
+
+/************************************************
+ *   Footer
+ ************************************************* */
+#splash_footer {
+  width: 960px;
+  height: 100%;
+  margin: 0 auto;
+  background-color: white;
+  display: block;
+  position: relative; }
+  #splash_footer h2 {
+    font-size: 34px;
+    font-weight: 400;
+    margin: 10px 0;
+    float: left !important;
+    display: block; }
+  #splash_footer p {
+    float: left !important;
+    font-size: 16px;
+    font-weight: 350; }
+
+#footer_left {
+  width: 50%;
+  float: left;
+  display: inline-block;
+  position: relative; }
+
+#footer_right {
+  width: 50%;
+  float: right;
+  display: inline-block;
+  position: relative; }
+
+/************************************************
+ *   Reset
+ ************************************************* */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0pt none;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0pt;
+  padding: 0pt;
+  vertical-align: baseline; }
+
+html {
+  background-color: white; }
+
+body {
+  margin: 0;
+  padding: 0px;
+  text-align: center;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; }
+
+/************************************************
+ *   Index 
+ ************************************************* */
+/************************************************
+ *  Login 
+ ************************************************* */
+#content_body {
+  position: relative;
+  margin: 20px auto;
+  width: 800px;
+  background-color: #ff4040;
+  min-height: 600px;
+  height: auto;
+  border-radius: 65px;
+  -moz-border-radius: 65px;
+  -webkit-border-radius: 65px; }
+  #content_body .login_summary {
+    background-color: #b4f63d;
+    width: 400px;
+    min-height: 300px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: 10%;
+    text-indent: 20px;
+    text-align: left;
+    border: 1px solid black;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-box-shadow: inset 0 0 30px 2px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 0 30px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 0 30px 2px rgba(0, 0, 0, 0.4); }
+    #content_body .login_summary p {
+      text-align: left;
+      padding: 25px; }
+      #content_body .login_summary p.login_links {
+        z-index: 9999;
+        font-size: 80%;
+        position: absolute;
+        bottom: 0;
+        padding: 0 0 0 20px;
+        margin: 0; }
+    #content_body .login_summary form {
+      border: 1px solid black;
+      width: 300px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 15px;
+      -moz-border-radius: 15px;
+      -webkit-border-radius: 15px; }
+      #content_body .login_summary form ._form {
+        position: relative;
+        width: 300px;
+        min-height: 100px; }
+        #content_body .login_summary form ._form div {
+          margin: 5px 0;
+          height: inherit;
+          height: 50px;
+          width: auto; }
+          #content_body .login_summary form ._form div label {
+            display: none; }
+          #content_body .login_summary form ._form div input {
+            margin: 6px auto;
+            height: 30px;
+            width: 80%;
+            font-size: 16px;
+            border-radius: 7px;
+            -moz-border-radius: 7px;
+            -webkit-border-radius: 7px; }
+          #content_body .login_summary form ._form div button {
+            width: 60px;
+            height: 35px;
+            font-weight: 600;
+            font-size: 14px;
+            font-family: menlo;
+            background-color: #5dcec6;
+            border: 2px outset #1d766f;
+            margin-left: 30%;
+            border-radius: 3px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px; }

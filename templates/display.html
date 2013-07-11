@@ -1,0 +1,14 @@
+$def with (fn, form)
+
+<div class="display_box">
+    <h1> Page for "$fn"</h1>
+    <div class="display_infobox">
+        <p> I am some descriptive text of the file in question </p>
+    </div>
+    <div class="display_infobox">
+        <p> I can be some more info
+    </div>
+    <form action="" method="POST">
+        $:form.render()
+    </form>
+</div>

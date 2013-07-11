@@ -87,7 +87,7 @@ body
           input
             margin: 6px auto
             height: 30px
-            width: 200px
+            width: 80%
             font-size: 16px
             @include round_edgify(7px)
           button

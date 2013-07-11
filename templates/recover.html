@@ -1,0 +1,10 @@
+$def with (form)
+
+<div>
+    <form method="POST" action="">
+        <input type="hidden" name="csrf_token" value="$csrf_token()"/>
+        $:form.render()
+    </form>
+</div>
+
+$var title: Password Recovery

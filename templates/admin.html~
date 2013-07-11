@@ -1,8 +1,40 @@
-$def with ()
+$def with (users, user_form, client_form)
 
-<div id="admin_dash">
+<div class="admin_dash">
+    $for i in users:
+        <div class="user_display">
+            <p>$i.username , $i.userID</p>
+            <form class="delete_button" action="" method="POST">
+                <input type="hidden" name="csrf_token" value="$csrf_token()" />
+                <input type="submit" value='delete' />
+                <input type="hidden" name="uid" value='$i.userID' />
+                <input type="hidden" name="cin" value='$i.FK_clientID' />
+            </form>
 
+            <form class="priv_lvl_form" action="" method="POST">
+                <input type="hidden" name="csrf_token" value="$csrf_token()" />
+                <label class="priv_label" for="priv">Privilege Level</label>
+                <input id="priv" type="text" name="priv_lvl"
+                value="$i.privilege" size="7" />
+                <input type="submit" value="Update" />
+            </form>
+        </div>
+
+    <div class="add_accounts">
+        <form class="admin_add_user" action="" method="POST">
+            <input type="hidden" name="csrf_token" value="$csrf_token()" />
+            $if context.cin < 1:
+                <label for="cin">Client ID Number</label>
+                <input type="text" name="cin" id="cin" size="25" />
+            $:user_form.render()
+        </form>
+
+        $if context.priv > 2 and context.cin < 1:
+            <form class="admin_add_client" action="" method="POST">
+                <input type="hidden" name="csrf_token" value="$csrf_token()" />
+                $:client_form.render()
+            </form>
+    </div>
 </div>
 
-var title: Admin
-
+$var title: Admin
